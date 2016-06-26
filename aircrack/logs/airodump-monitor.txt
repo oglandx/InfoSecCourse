@@ -1,0 +1,46 @@
+[oglandx@oglandx lab]$ sudo airodump-ng wlp2s0mon
+
+ CH 10 ][ Elapsed: 24 s ][ 2016-06-26 21:32                                         
+                                                                                                                       
+ BSSID              PWR  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                                                                       
+ 00:90:4C:C1:00:00  -88        0        0    0   1  54   WPA2 CCMP   PSK  412                                          
+ E0:3F:49:8A:44:30  -52       42       10    0   1  54e  WPA2 CCMP   PSK  <length:  7>                                 
+ 14:D6:4D:B4:EB:8A  -62       42        2    0  11  54e. WEP  WEP         542                                          
+ C8:D7:19:F1:6F:2F  -64       27        1    0   1  54e  WPA2 CCMP   PSK  <length:  3>                                 
+ F8:C0:91:11:6C:8A  -66       49        2    0   9  54e  WPA2 CCMP   PSK  Rita                                         
+ C0:4A:00:BA:79:50  -67       31        0    0   6  54e. WPA2 CCMP   PSK  444                                          
+ BC:EE:7B:6B:A0:1C  -73       33      208    0   1  54e  WPA2 CCMP   PSK  446                                          
+ C0:4A:00:B1:92:A8  -72       15        1    0   9  54e. WPA2 CCMP   PSK  RiChBiTcH                                    
+ D8:50:E6:C8:24:F4  -73       15        0    0   4  54e  WPA2 CCMP   PSK  Alex                                         
+ 28:C2:DD:0E:71:4B  -71       18        0    0   1  54e  WPA2 CCMP   PSK  Wifi                                         
+ F0:7D:68:3E:C1:61  -71       20      126    0   6  54   WPA2 CCMP   PSK  malina-mammamia                              
+ C8:3A:35:0F:2A:60  -69       29        0    0   7  54e  WPA2 CCMP   PSK  448                                          
+ 90:F6:52:8A:42:14  -74       30        0    0   6  54e. WPA2 CCMP   PSK  TP-LINK_8A4214                               
+ B8:A3:86:12:6B:4C  -74       26        0    0   1  54e  WPA2 CCMP   PSK  LeXa                                         
+ 60:E3:27:34:C6:04  -71       48        1    0   3  54e. WPA2 CCMP   PSK  543                                          
+ 2C:AB:25:DB:43:D0  -74       23        0    0   1  54e  WPA2 CCMP   PSK  DiegoNet                                     
+ 00:22:B0:4B:41:05  -74       18        0    0   2  54 . WPA2 CCMP   PSK  OMG                                          
+ 60:E3:27:3E:60:26  -76       11        0    0  10  54e. WPA2 CCMP   PSK  CrazySquirrel                                
+ 28:28:5D:E1:08:90  -79       23        0    0   5  54e  WPA2 CCMP   PSK  Keenetic-2296                                
+ FC:8B:97:8E:C9:2F  -75       14        1    0  12  54e  WPA2 CCMP   PSK  541r                                         
+ C0:4A:00:B9:79:8C  -78       14        0    0   1  54e. WPA2 CCMP   PSK  Sailorstars                                  
+ 10:FE:ED:2A:15:88  -78       10        0    0   1  54e. WPA2 CCMP   PSK  Pan-Pan                                      
+ C0:4A:00:A2:30:DA  -77        7        0    0   1  54e. WPA2 CCMP   PSK  TP-LINK_A230DA                               
+ 84:C9:B2:06:B7:32  -78        2        0    0  11  54e  WPA2 CCMP   PSK  DIR-320NRU                                   
+ 14:CC:20:BD:AA:54  -78       25        0    0  11  54e. WPA2 CCMP   PSK  i-twister                                    
+ E8:DE:27:C3:1B:74  -79       11        0    0   8  54e. WPA2 CCMP   PSK  room549                                      
+ F8:1A:67:70:2F:FC  -81       14        0    0   6  54e. WPA2 CCMP   PSK  room545                                      
+ EA:28:5D:B2:6B:60  -82        9        0    0   1  54e  WPA2 CCMP   PSK  Tanya_Vika                                   
+ 00:26:5A:32:50:21  -81        2        0    0   6  54e. WPA2 TKIP   PSK  220rmoterfucker                              
+ 30:B5:C2:C8:E1:AA  -82        1        0    0   7  54e. WPA2 CCMP   PSK  Eto nasha to4ka bleat...                     
+ A0:F3:C1:98:88:6C  -81       15        0    0   5  54e. WPA2 CCMP   PSK  Room_419                                     
+ D8:EB:97:20:0A:C9  -82       10       80    0   7  54e  WPA2 CCMP   PSK  mns.ru-0114                                  
+ C4:6E:1F:BC:76:BA  -80       17        0    0  11  54e. WPA2 CCMP   PSK  Black Bears hockey&cheerleading              
+ 18:28:61:02:CF:21  -83        1        4    0   6  54e  WPA2 CCMP   PSK  AirTies_Air4340_cf21                         
+ C0:4A:00:C8:62:10  -84        3        0    0   6  54e. WPA2 CCMP   PSK  TP-LINK_C86210                               
+ 30:B5:C2:65:2D:72  -81       16        0    0  11  54e. WPA2 CCMP   PSK  111-HP_Network_1                             
+ C4:6E:1F:FD:3F:1E  -84        5        0    0   5  54e. WPA2 CCMP   PSK  TP-LINK_HONG&WEIRH                           
+
+[oglandx@oglandx lab]$ 
+

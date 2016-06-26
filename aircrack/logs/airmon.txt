@@ -1,0 +1,44 @@
+[oglandx@oglandx lab]$ ifconfig
+enp4s0: flags=67<UP,BROADCAST,RUNNING>  mtu 1500
+        inet 10.145.74.96  netmask 255.255.255.0  broadcast 10.145.74.255
+        inet6 fe80::198a:a332:44ca:d7ae  prefixlen 64  scopeid 0x20<link>
+        ether 00:24:54:a7:a4:55  txqueuelen 1000  (Ethernet)
+        RX packets 48310  bytes 26388845 (25.1 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19215  bytes 4218668 (4.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 19  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 4493  bytes 803689 (784.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4493  bytes 803689 (784.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlp2s0mon: flags=867<UP,BROADCAST,NOTRAILERS,RUNNING,PROMISC,ALLMULTI>  mtu 1500
+        unspec 78-E4-00-5D-1C-DE-00-1F-00-00-00-00-00-00-00-00  txqueuelen 1000  (UNSPEC)
+        RX packets 3517699  bytes 414781975 (395.5 MiB)
+        RX errors 0  dropped 3412675  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[oglandx@oglandx lab]$ sudo airmon-ng start wlp2s0mon
+[sudo] password for oglandx: 
+
+Found 2 processes that could cause trouble.
+If airodump-ng, aireplay-ng or airtun-ng stops working after
+a short period of time, you may want to run 'airmon-ng check kill'
+
+  PID Name
+  758 dhcpcd
+ 2536 dhcpcd
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlp2s0mon	ath9k		Qualcomm Atheros AR9285 Wireless Network Adapter (PCI-Express) (rev 01)
+
+		(mac80211 monitor mode already enabled for [phy0]wlp2s0mon on [phy0]10)
+

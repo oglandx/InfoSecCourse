@@ -1,0 +1,15 @@
+[oglandx@oglandx lab]$ sudo airodump-ng --bssid E0:3F:49:8A:44:30 -c 1 --write airodump_dump --ignore-negative-one --output-format pcap wlp2s0mon
+[sudo] password for oglandx: 
+
+ CH  1 ][ Elapsed: 1 min ][ 2016-06-26 21:39 ][ WPA handshake: E0:3F:49:8A:44:30                  
+                                                                                                  
+ BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                                                  
+ E0:3F:49:8A:44:30    0   0      425       44    0   1  54e  WPA2 CCMP   PSK  room546             
+                                                                                                  
+ BSSID              STATION            PWR   Rate    Lost    Frames  Probe                        
+                                                                                                  
+ E0:3F:49:8A:44:30  00:03:AA:DF:5C:0D    0    1e- 1e     0    12868                                
+
+[oglandx@oglandx lab]$ 
+
