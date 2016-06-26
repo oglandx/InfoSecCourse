@@ -1,0 +1,12 @@
+[*] exec: nmap -sn 10.0.0.*
+
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-06-24 08:54 UTC
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.0.0.2
+Host is up (0.0011s latency).
+MAC Address: 08:00:27:67:80:33 (Cadmus Computer Systems)
+Nmap scan report for 10.0.0.1
+Host is up.
+Nmap done: 256 IP addresses (2 hosts up) scanned in 3.49 seconds
+

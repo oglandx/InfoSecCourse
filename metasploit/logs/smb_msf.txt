@@ -1,0 +1,113 @@
+msf> search smb
+[!] Database not connected or cache not built, using slow search
+
+Matching Modules
+================
+
+   Name                                                            Disclosure Date  Rank       Description
+   ----                                                            ---------------  ----       -----------
+   auxiliary/admin/mssql/mssql_ntlm_stealer                                         normal     Microsoft SQL Server NTLM Stealer
+   auxiliary/admin/mssql/mssql_ntlm_stealer_sqli                                    normal     Microsoft SQL Server NTLM Stealer - SQLi
+   auxiliary/admin/oracle/ora_ntlm_stealer                         2009-04-07       normal     Oracle SMB Relay Code Execution
+   auxiliary/admin/smb/check_dir_file                                               normal     SMB Scanner Check File/Directory Utility
+   auxiliary/admin/smb/delete_file                                                  normal     SMB File Delete Utility
+   auxiliary/admin/smb/download_file                                                normal     SMB File Download Utility
+   auxiliary/admin/smb/list_directory                                               normal     SMB Directory Listing Utility
+   auxiliary/admin/smb/psexec_command                                               normal     Microsoft Windows Authenticated Administration Utility
+   auxiliary/admin/smb/psexec_ntdsgrab                                              normal     PsExec NTDS.dit And SYSTEM Hive Download Utility
+   auxiliary/admin/smb/samba_symlink_traversal                                      normal     Samba Symlink Directory Traversal
+   auxiliary/admin/smb/upload_file                                                  normal     SMB File Upload Utility
+   auxiliary/docx/word_unc_injector                                                 normal     Microsoft Word UNC Path Injector
+   auxiliary/dos/samba/read_nttrans_ea_list                                         normal     Samba read_nttrans_ea_list Integer Overflow
+   auxiliary/dos/sap/sap_soap_rfc_eps_delete_file                                   normal     SAP SOAP EPS_DELETE_FILE File Deletion
+   auxiliary/dos/windows/smb/ms05_047_pnp                                           normal     Microsoft Plug and Play Service Registry Overflow
+   auxiliary/dos/windows/smb/ms06_035_mailslot                     2006-07-11       normal     Microsoft SRV.SYS Mailslot Write Corruption
+   auxiliary/dos/windows/smb/ms06_063_trans                                         normal     Microsoft SRV.SYS Pipe Transaction No Null
+   auxiliary/dos/windows/smb/ms09_001_write                                         normal     Microsoft SRV.SYS WriteAndX Invalid DataOffset
+   auxiliary/dos/windows/smb/ms09_050_smb2_negotiate_pidhigh                        normal     Microsoft SRV2.SYS SMB Negotiate ProcessID Function Table Dereference
+   auxiliary/dos/windows/smb/ms09_050_smb2_session_logoff                           normal     Microsoft SRV2.SYS SMB2 Logoff Remote Kernel NULL Pointer Dereference
+   auxiliary/dos/windows/smb/ms10_006_negotiate_response_loop                       normal     Microsoft Windows 7 / Server 2008 R2 SMB Client Infinite Loop
+   auxiliary/dos/windows/smb/ms10_054_queryfs_pool_overflow                         normal     Microsoft Windows SRV.SYS SrvSmbQueryFsInformation Pool Overflow DoS
+   auxiliary/dos/windows/smb/ms11_019_electbowser                                   manual     Microsoft Windows Browser Pool DoS
+   auxiliary/dos/windows/smb/rras_vls_null_deref                   2006-06-14       normal     Microsoft RRAS InterfaceAdjustVLSPointers NULL Dereference
+   auxiliary/dos/windows/smb/vista_negotiate_stop                                   normal     Microsoft Vista SP0 SMB Negotiate Protocol DoS
+   auxiliary/fuzzers/smb/smb2_negotiate_corrupt                                     normal     SMB Negotiate SMB2 Dialect Corruption
+   auxiliary/fuzzers/smb/smb_create_pipe                                            normal     SMB Create Pipe Request Fuzzer
+   auxiliary/fuzzers/smb/smb_create_pipe_corrupt                                    normal     SMB Create Pipe Request Corruption
+   auxiliary/fuzzers/smb/smb_negotiate_corrupt                                      normal     SMB Negotiate Dialect Corruption
+   auxiliary/fuzzers/smb/smb_ntlm1_login_corrupt                                    normal     SMB NTLMv1 Login Request Corruption
+   auxiliary/fuzzers/smb/smb_tree_connect                                           normal     SMB Tree Connect Request Fuzzer
+   auxiliary/fuzzers/smb/smb_tree_connect_corrupt                                   normal     SMB Tree Connect Request Corruption
+   auxiliary/scanner/sap/sap_smb_relay                                              normal     SAP SMB Relay Abuse
+   auxiliary/scanner/sap/sap_soap_rfc_eps_get_directory_listing                     normal     SAP SOAP RFC EPS_GET_DIRECTORY_LISTING Directories Information Disclosure
+   auxiliary/scanner/sap/sap_soap_rfc_pfl_check_os_file_existence                   normal     SAP SOAP RFC PFL_CHECK_OS_FILE_EXISTENCE File Existence Check
+   auxiliary/scanner/sap/sap_soap_rfc_rzl_read_dir                                  normal     SAP SOAP RFC RZL_READ_DIR_LOCAL Directory Contents Listing
+   auxiliary/scanner/smb/pipe_auditor                                               normal     SMB Session Pipe Auditor
+   auxiliary/scanner/smb/pipe_dcerpc_auditor                                        normal     SMB Session Pipe DCERPC Auditor
+   auxiliary/scanner/smb/psexec_loggedin_users                                      normal     Microsoft Windows Authenticated Logged In Users Enumeration
+   auxiliary/scanner/smb/smb2                                                       normal     SMB 2.0 Protocol Detection
+   auxiliary/scanner/smb/smb_enumshares                                             normal     SMB Share Enumeration
+   auxiliary/scanner/smb/smb_enumusers                                              normal     SMB User Enumeration (SAM EnumUsers)
+   auxiliary/scanner/smb/smb_enumusers_domain                                       normal     SMB Domain User Enumeration
+   auxiliary/scanner/smb/smb_login                                                  normal     SMB Login Check Scanner
+   auxiliary/scanner/smb/smb_lookupsid                                              normal     SMB Local User Enumeration (LookupSid)
+   auxiliary/scanner/smb/smb_version                                                normal     SMB Version Detection
+   auxiliary/scanner/snmp/snmp_enumshares                                           normal     SNMP Windows SMB Share Enumeration
+   auxiliary/server/capture/smb                                                     normal     Authentication Capture: SMB
+   auxiliary/server/http_ntlmrelay                                                  normal     HTTP Client MS Credential Relayer
+   auxiliary/spoof/nbns/nbns_response                                               normal     NetBIOS Name Service Spoofer
+   exploit/linux/samba/chain_reply                                 2010-06-16       good       Samba chain_reply Memory Corruption (Linux x86)
+   exploit/multi/ids/snort_dce_rpc                                 2007-02-19       good       Snort 2 DCE/RPC Preprocessor Buffer Overflow
+   exploit/netware/smb/lsass_cifs                                  2007-01-21       average    Novell NetWare LSASS CIFS.NLM Driver Stack Buffer Overflow
+   exploit/osx/browser/safari_file_policy                          2011-10-12       normal     Apple Safari file:// Arbitrary Code Execution
+   exploit/windows/browser/java_ws_arginject_altjvm                2010-04-09       excellent  Sun Java Web Start Plugin Command Line Argument Injection
+   exploit/windows/browser/java_ws_double_quote                    2012-10-16       excellent  Sun Java Web Start Double Quote Injection
+   exploit/windows/browser/java_ws_vmargs                          2012-02-14       excellent  Sun Java Web Start Plugin Command Line Argument Injection
+   exploit/windows/browser/ms10_022_ie_vbscript_winhlp32           2010-02-26       great      Internet Explorer Winhlp32.exe MsgBox Code Execution
+   exploit/windows/fileformat/ms13_071_theme                       2013-09-10       excellent  MS13-071 Microsoft Windows Theme File Handling Arbitrary Code Execution
+   exploit/windows/fileformat/ursoft_w32dasm                       2005-01-24       good       URSoft W32Dasm Disassembler Function Buffer Overflow
+   exploit/windows/fileformat/vlc_smb_uri                          2009-06-24       great      VideoLAN Client (VLC) Win32 smb:// URI Buffer Overflow
+   exploit/windows/oracle/extjob                                   2007-01-01       excellent  Oracle Job Scheduler Named Pipe Command Execution
+   exploit/windows/smb/ms03_049_netapi                             2003-11-11       good       Microsoft Workstation Service NetAddAlternateComputerName Overflow
+   exploit/windows/smb/ms04_007_killbill                           2004-02-10       low        Microsoft ASN.1 Library Bitstring Heap Overflow
+   exploit/windows/smb/ms04_011_lsass                              2004-04-13       good       Microsoft LSASS Service DsRolerUpgradeDownlevelServer Overflow
+   exploit/windows/smb/ms04_031_netdde                             2004-10-12       good       Microsoft NetDDE Service Overflow
+   exploit/windows/smb/ms05_039_pnp                                2005-08-09       good       Microsoft Plug and Play Service Overflow
+   exploit/windows/smb/ms06_025_rasmans_reg                        2006-06-13       good       Microsoft RRAS Service RASMAN Registry Overflow
+   exploit/windows/smb/ms06_025_rras                               2006-06-13       average    Microsoft RRAS Service Overflow
+   exploit/windows/smb/ms06_040_netapi                             2006-08-08       good       Microsoft Server Service NetpwPathCanonicalize Overflow
+   exploit/windows/smb/ms06_066_nwapi                              2006-11-14       good       Microsoft Services MS06-066 nwapi32.dll Module Exploit
+   exploit/windows/smb/ms06_066_nwwks                              2006-11-14       good       Microsoft Services MS06-066 nwwks.dll Module Exploit
+   exploit/windows/smb/ms06_070_wkssvc                             2006-11-14       manual     Microsoft Workstation Service NetpManageIPCConnect Overflow
+   exploit/windows/smb/ms07_029_msdns_zonename                     2007-04-12       manual     Microsoft DNS RPC Service extractQuotedChar() Overflow (SMB)
+   exploit/windows/smb/ms08_067_netapi                             2008-10-28       great      Microsoft Server Service Relative Path Stack Corruption
+   exploit/windows/smb/ms09_050_smb2_negotiate_func_index          2009-09-07       good       Microsoft SRV2.SYS SMB Negotiate ProcessID Function Table Dereference
+   exploit/windows/smb/ms10_061_spoolss                            2010-09-14       excellent  Microsoft Print Spooler Service Impersonation Vulnerability
+   exploit/windows/smb/netidentity_xtierrpcpipe                    2009-04-06       great      Novell NetIdentity Agent XTIERRPCPIPE Named Pipe Buffer Overflow
+   exploit/windows/smb/psexec                                      1999-01-01       manual     Microsoft Windows Authenticated User Code Execution
+   exploit/windows/smb/psexec_psh                                  1999-01-01       manual     Microsoft Windows Authenticated Powershell Command Execution
+   exploit/windows/smb/smb_relay                                   2001-03-31       excellent  Microsoft Windows SMB Relay Code Execution
+   exploit/windows/smb/timbuktu_plughntcommand_bof                 2009-06-25       great      Timbuktu <= 8.6.6 PlughNTCommand Named Pipe Buffer Overflow
+   post/linux/gather/mount_cifs_creds                                               normal     Linux Gather Saved mount.cifs/mount.smbfs Credentials
+   post/windows/escalate/droplnk                                                    normal     Windows Escalate SMB Icon LNK Dropper
+   post/windows/gather/credentials/gpp                                              normal     Windows Gather Group Policy Preference Saved Passwords
+   post/windows/gather/enum_shares                                                  normal     Windows Gather SMB Share Enumeration via Registry
+   post/windows/gather/netlm_downgrade                                              normal     Windows NetLM Downgrade Attack
+   post/windows/gather/word_unc_injector                                            normal     Windows Gather Microsoft Office Word UNC Path Injector
+
+
+msf> use auxiliary/scanner/smb/smb_enumshares 
+msf auxiliary(smb_enumshares) > set RHOSTS 10.0.0.2
+RHOSTS => 10.0.0.2
+msf auxiliary(smb_enumshares) > set THREADS 4
+THREADS => 4
+msf auxiliary(smb_enumshares) > run
+
+[*] 10.0.0.2:139 - Unix Samba 3.0.20-Debian (Unknown)
+[*] 10.0.0.2:139 - print$ - Printer Drivers (DISK), tmp - oh noes! (DISK), opt -  (DISK), IPC$ - IPC Service (metasploitable server (Samba 3.0.20-Debian)) (IPC), ADMIN$ - IPC Service (metasploitable server (Samba 3.0.20-Debian)) (IPC)
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(smb_enumshares) > 
+msf auxiliary(smb_enumshares) > back
+msf> 
+

