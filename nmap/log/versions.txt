@@ -1,0 +1,47 @@
+root@kali:~# nmap -sV 10.0.0.2
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-06-19 19:58 UTC
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.0.0.2
+Host is up (0.036s latency).
+Not shown: 978 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
+512/tcp  open  exec        netkit-rsh rexecd
+513/tcp  open  login?
+514/tcp  open  shell?
+1099/tcp open  rmiregistry GNU Classpath grmiregistry
+1524/tcp open  shell       Metasploitable root shell
+2049/tcp open  nfs         2-4 (RPC #100003)
+2121/tcp open  ftp         ProFTPD 1.3.1
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+5900/tcp open  vnc         VNC (protocol 3.3)
+6000/tcp open  X11         (access denied)
+6667/tcp open  irc         Unreal ircd
+8180/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port514-TCP:V=6.40%I=7%D=6/19%Time=5766F976%P=i686-pc-linux-gnu%r(NULL,
+SF:33,"\x01getnameinfo:\x20Temporary\x20failure\x20in\x20name\x20resolutio
+SF:n\n")%r(GetRequest,33,"\x01getnameinfo:\x20Temporary\x20failure\x20in\x
+SF:20name\x20resolution\n")%r(RPCCheck,33,"\x01getnameinfo:\x20Temporary\x
+SF:20failure\x20in\x20name\x20resolution\n")%r(DNSStatusRequest,33,"\x01ge
+SF:tnameinfo:\x20Temporary\x20failure\x20in\x20name\x20resolution\n")%r(Ge
+SF:nericLines,33,"\x01getnameinfo:\x20Temporary\x20failure\x20in\x20name\x
+SF:20resolution\n")%r(HTTPOptions,33,"\x01getnameinfo:\x20Temporary\x20fai
+SF:lure\x20in\x20name\x20resolution\n")%r(kumo-server,33,"\x01getnameinfo:
+SF:\x20Temporary\x20failure\x20in\x20name\x20resolution\n");
+MAC Address: 08:00:27:67:80:33 (Cadmus Computer Systems)
+Service Info: Hosts:  metasploitable.localdomain, localhost, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 163.28 seconds
+root@kali:~# 

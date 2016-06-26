@@ -1,0 +1,65 @@
+root@kali:~# /etc/init.d/postgresql start
+[....] Starting PostgreSQL 9.1 database server: main
+. ok 
+root@kali:~# service metasploit start
+Configuring Metasploit...
+Creating metasploit database user 'msf3'...
+Creating metasploit database 'msf3'...
+insserv: warning: current start runlevel(s) (empty) of script `metasploit' overrides LSB defaults (2 3 4 5).
+insserv: warning: current stop runlevel(s) (0 1 2 3 4 5 6) of script `metasploit' overrides LSB defaults (0 1 6).
+[ ok ] Starting Metasploit rpc server: prosvc.
+[ ok ] Starting Metasploit web server: thin.
+[ ok ] Starting Metasploit worker: worker.
+root@kali:~# msfconsole
+NOTICE:  CREATE TABLE will create implicit sequence "hosts_id_seq" for serial column "hosts.id"
+<...>
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "task_sessions_pkey" for table "task_sessions"
+[*] The initial module cache will be built in the background, this can take 2-5 minutes...
+ _                                                    _
+/ \    /\         __                         _   __  /_/ __
+| |\  / | _____   \ \           ___   _____ | | /  \ _   \ \
+| | \/| | | ___\ |- -|   /\    / __\ | -__/ | || | || | |- -|
+|_|   | | | _|__  | |_  / -\ __\ \   | |    | | \__/| |  | |_
+      |/  |____/  \___\/ /\ \\___/   \/     \__|    |_\  \___\
+
+
+Save your shells from AV! Upgrade to advanced AV evasion using dynamic
+exe templates with Metasploit Pro -- type 'go_pro' to launch it now.
+
+       =[ metasploit v4.8.2-2014010101 [core:4.8 api:1.0]
++ -- --=[ 1246 exploits - 678 auxiliary - 198 post
++ -- --=[ 324 payloads - 32 encoders - 8 nops
+msf >
+msf > db_nmap 10.0.0.2
+[*] Nmap: Starting Nmap 6.40 ( http://nmap.org ) at 2016-06-20 09:45 UTC
+[*] Nmap: 'mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers'
+[*] Nmap: Nmap scan report for 10.0.0.2
+[*] Nmap: Host is up (0.0019s latency).
+[*] Nmap: Not shown: 978 closed ports
+[*] Nmap: PORT     STATE SERVICE
+[*] Nmap: 21/tcp   open  ftp
+[*] Nmap: 22/tcp   open  ssh
+[*] Nmap: 23/tcp   open  telnet
+[*] Nmap: 25/tcp   open  smtp
+[*] Nmap: 53/tcp   open  domain
+[*] Nmap: 80/tcp   open  http
+[*] Nmap: 111/tcp  open  rpcbind
+[*] Nmap: 139/tcp  open  netbios-ssn
+[*] Nmap: 445/tcp  open  microsoft-ds
+[*] Nmap: 512/tcp  open  exec
+[*] Nmap: 513/tcp  open  login
+[*] Nmap: 514/tcp  open  shell
+[*] Nmap: 1099/tcp open  rmiregistry
+[*] Nmap: 1524/tcp open  ingreslock
+[*] Nmap: 2049/tcp open  nfs
+[*] Nmap: 2121/tcp open  ccproxy-ftp
+[*] Nmap: 3306/tcp open  mysql
+[*] Nmap: 5432/tcp open  postgresql
+[*] Nmap: 5900/tcp open  vnc
+[*] Nmap: 6000/tcp open  X11
+[*] Nmap: 6667/tcp open  irc
+[*] Nmap: 8180/tcp open  unknown
+[*] Nmap: MAC Address: 08:00:27:67:80:33 (Cadmus Computer Systems)
+[*] Nmap: Nmap done: 1 IP address (1 host up) scanned in 5.15 seconds
+msf > 
+

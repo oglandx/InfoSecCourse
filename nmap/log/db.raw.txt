@@ -1,0 +1,172 @@
+root@kali:~# /etc/init.d/postgresql start
+[....] Starting PostgreSQL 9.1 database server: main
+. ok 
+root@kali:~# service metasploit start
+Configuring Metasploit...
+Creating metasploit database user 'msf3'...
+Creating metasploit database 'msf3'...
+insserv: warning: current start runlevel(s) (empty) of script `metasploit' overrides LSB defaults (2 3 4 5).
+insserv: warning: current stop runlevel(s) (0 1 2 3 4 5 6) of script `metasploit' overrides LSB defaults (0 1 6).
+[ ok ] Starting Metasploit rpc server: prosvc.
+[ ok ] Starting Metasploit web server: thin.
+[ ok ] Starting Metasploit worker: worker.
+root@kali:~# msfconsole
+NOTICE:  CREATE TABLE will create implicit sequence "hosts_id_seq" for serial column "hosts.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "hosts_pkey" for table "hosts"
+NOTICE:  CREATE TABLE will create implicit sequence "clients_id_seq" for serial column "clients.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "clients_pkey" for table "clients"
+NOTICE:  CREATE TABLE will create implicit sequence "services_id_seq" for serial column "services.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "services_pkey" for table "services"
+NOTICE:  CREATE TABLE will create implicit sequence "vulns_id_seq" for serial column "vulns.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "vulns_pkey" for table "vulns"
+NOTICE:  CREATE TABLE will create implicit sequence "refs_id_seq" for serial column "refs.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "refs_pkey" for table "refs"
+NOTICE:  CREATE TABLE will create implicit sequence "notes_id_seq" for serial column "notes.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "notes_pkey" for table "notes"
+NOTICE:  CREATE TABLE will create implicit sequence "wmap_targets_id_seq" for serial column "wmap_targets.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "wmap_targets_pkey" for table "wmap_targets"
+NOTICE:  CREATE TABLE will create implicit sequence "wmap_requests_id_seq" for serial column "wmap_requests.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "wmap_requests_pkey" for table "wmap_requests"
+NOTICE:  CREATE TABLE will create implicit sequence "workspaces_id_seq" for serial column "workspaces.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "workspaces_pkey" for table "workspaces"
+NOTICE:  CREATE TABLE will create implicit sequence "events_id_seq" for serial column "events.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "events_pkey" for table "events"
+NOTICE:  CREATE TABLE will create implicit sequence "loots_id_seq" for serial column "loots.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "loots_pkey" for table "loots"
+NOTICE:  CREATE TABLE will create implicit sequence "users_id_seq" for serial column "users.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "users_pkey" for table "users"
+NOTICE:  CREATE TABLE will create implicit sequence "reports_id_seq" for serial column "reports.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "reports_pkey" for table "reports"
+NOTICE:  CREATE TABLE will create implicit sequence "tasks_id_seq" for serial column "tasks.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "tasks_pkey" for table "tasks"
+NOTICE:  CREATE TABLE will create implicit sequence "creds_id_seq" for serial column "creds.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "creds_pkey" for table "creds"
+NOTICE:  CREATE TABLE will create implicit sequence "exploited_hosts_id_seq" for serial column "exploited_hosts.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "exploited_hosts_pkey" for table "exploited_hosts"
+NOTICE:  CREATE TABLE will create implicit sequence "report_templates_id_seq" for serial column "report_templates.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "report_templates_pkey" for table "report_templates"
+NOTICE:  CREATE TABLE will create implicit sequence "campaigns_id_seq" for serial column "campaigns.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "campaigns_pkey" for table "campaigns"
+NOTICE:  CREATE TABLE will create implicit sequence "email_templates_id_seq" for serial column "email_templates.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "email_templates_pkey" for table "email_templates"
+NOTICE:  CREATE TABLE will create implicit sequence "attachments_id_seq" for serial column "attachments.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "attachments_pkey" for table "attachments"
+NOTICE:  CREATE TABLE will create implicit sequence "email_addresses_id_seq" for serial column "email_addresses.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "email_addresses_pkey" for table "email_addresses"
+NOTICE:  CREATE TABLE will create implicit sequence "web_templates_id_seq" for serial column "web_templates.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "web_templates_pkey" for table "web_templates"
+NOTICE:  CREATE TABLE will create implicit sequence "web_sites_id_seq" for serial column "web_sites.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "web_sites_pkey" for table "web_sites"
+NOTICE:  CREATE TABLE will create implicit sequence "web_pages_id_seq" for serial column "web_pages.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "web_pages_pkey" for table "web_pages"
+NOTICE:  CREATE TABLE will create implicit sequence "web_forms_id_seq" for serial column "web_forms.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "web_forms_pkey" for table "web_forms"
+NOTICE:  CREATE TABLE will create implicit sequence "web_vulns_id_seq" for serial column "web_vulns.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "web_vulns_pkey" for table "web_vulns"
+NOTICE:  CREATE TABLE will create implicit sequence "imported_creds_id_seq" for serial column "imported_creds.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "imported_creds_pkey" for table "imported_creds"
+NOTICE:  CREATE TABLE will create implicit sequence "tags_id_seq" for serial column "tags.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "tags_pkey" for table "tags"
+NOTICE:  CREATE TABLE will create implicit sequence "sessions_id_seq" for serial column "sessions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "sessions_pkey" for table "sessions"
+NOTICE:  CREATE TABLE will create implicit sequence "session_events_id_seq" for serial column "session_events.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "session_events_pkey" for table "session_events"
+NOTICE:  CREATE TABLE will create implicit sequence "routes_id_seq" for serial column "routes.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "routes_pkey" for table "routes"
+NOTICE:  CREATE TABLE will create implicit sequence "api_keys_id_seq" for serial column "api_keys.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "api_keys_pkey" for table "api_keys"
+NOTICE:  CREATE TABLE will create implicit sequence "macros_id_seq" for serial column "macros.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "macros_pkey" for table "macros"
+NOTICE:  CREATE TABLE will create implicit sequence "listeners_id_seq" for serial column "listeners.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "listeners_pkey" for table "listeners"
+NOTICE:  CREATE TABLE will create implicit sequence "nexpose_consoles_id_seq" for serial column "nexpose_consoles.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "nexpose_consoles_pkey" for table "nexpose_consoles"
+NOTICE:  CREATE TABLE will create implicit sequence "profiles_id_seq" for serial column "profiles.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "profiles_pkey" for table "profiles"
+NOTICE:  CREATE TABLE will create implicit sequence "mod_refs_id_seq" for serial column "mod_refs.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "mod_refs_pkey" for table "mod_refs"
+NOTICE:  CREATE TABLE will create implicit sequence "vuln_details_id_seq" for serial column "vuln_details.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "vuln_details_pkey" for table "vuln_details"
+NOTICE:  CREATE TABLE will create implicit sequence "host_details_id_seq" for serial column "host_details.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "host_details_pkey" for table "host_details"
+NOTICE:  CREATE TABLE will create implicit sequence "vuln_attempts_id_seq" for serial column "vuln_attempts.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "vuln_attempts_pkey" for table "vuln_attempts"
+NOTICE:  CREATE TABLE will create implicit sequence "module_details_id_seq" for serial column "module_details.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_details_pkey" for table "module_details"
+NOTICE:  CREATE TABLE will create implicit sequence "module_authors_id_seq" for serial column "module_authors.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_authors_pkey" for table "module_authors"
+NOTICE:  CREATE TABLE will create implicit sequence "module_mixins_id_seq" for serial column "module_mixins.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_mixins_pkey" for table "module_mixins"
+NOTICE:  CREATE TABLE will create implicit sequence "module_targets_id_seq" for serial column "module_targets.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_targets_pkey" for table "module_targets"
+NOTICE:  CREATE TABLE will create implicit sequence "module_actions_id_seq" for serial column "module_actions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_actions_pkey" for table "module_actions"
+NOTICE:  CREATE TABLE will create implicit sequence "module_refs_id_seq" for serial column "module_refs.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_refs_pkey" for table "module_refs"
+NOTICE:  CREATE TABLE will create implicit sequence "module_archs_id_seq" for serial column "module_archs.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_archs_pkey" for table "module_archs"
+NOTICE:  CREATE TABLE will create implicit sequence "module_platforms_id_seq" for serial column "module_platforms.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "module_platforms_pkey" for table "module_platforms"
+NOTICE:  CREATE TABLE will create implicit sequence "exploit_attempts_id_seq" for serial column "exploit_attempts.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "exploit_attempts_pkey" for table "exploit_attempts"
+NOTICE:  ALTER TABLE will create implicit sequence "vulns_refs_id_seq" for serial column "vulns_refs.id"
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "vulns_refs_pkey" for table "vulns_refs"
+NOTICE:  CREATE TABLE will create implicit sequence "task_creds_id_seq" for serial column "task_creds.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "task_creds_pkey" for table "task_creds"
+NOTICE:  CREATE TABLE will create implicit sequence "task_hosts_id_seq" for serial column "task_hosts.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "task_hosts_pkey" for table "task_hosts"
+NOTICE:  CREATE TABLE will create implicit sequence "task_services_id_seq" for serial column "task_services.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "task_services_pkey" for table "task_services"
+NOTICE:  ALTER TABLE will create implicit sequence "hosts_tags_id_seq" for serial column "hosts_tags.id"
+NOTICE:  ALTER TABLE / ADD PRIMARY KEY will create implicit index "hosts_tags_pkey" for table "hosts_tags"
+NOTICE:  CREATE TABLE will create implicit sequence "task_sessions_id_seq" for serial column "task_sessions.id"
+NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "task_sessions_pkey" for table "task_sessions"
+[*] The initial module cache will be built in the background, this can take 2-5 minutes...
+ _                                                    _
+/ \    /\         __                         _   __  /_/ __
+| |\  / | _____   \ \           ___   _____ | | /  \ _   \ \
+| | \/| | | ___\ |- -|   /\    / __\ | -__/ | || | || | |- -|
+|_|   | | | _|__  | |_  / -\ __\ \   | |    | | \__/| |  | |_
+      |/  |____/  \___\/ /\ \\___/   \/     \__|    |_\  \___\
+
+
+Save your shells from AV! Upgrade to advanced AV evasion using dynamic
+exe templates with Metasploit Pro -- type 'go_pro' to launch it now.
+
+       =[ metasploit v4.8.2-2014010101 [core:4.8 api:1.0]
++ -- --=[ 1246 exploits - 678 auxiliary - 198 post
++ -- --=[ 324 payloads - 32 encoders - 8 nops
+
+msf > db_nmap 10.0.0.2
+[*] Nmap: Starting Nmap 6.40 ( http://nmap.org ) at 2016-06-20 09:45 UTC
+[*] Nmap: 'mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers'
+[*] Nmap: Nmap scan report for 10.0.0.2
+[*] Nmap: Host is up (0.0019s latency).
+[*] Nmap: Not shown: 978 closed ports
+[*] Nmap: PORT     STATE SERVICE
+[*] Nmap: 21/tcp   open  ftp
+[*] Nmap: 22/tcp   open  ssh
+[*] Nmap: 23/tcp   open  telnet
+[*] Nmap: 25/tcp   open  smtp
+[*] Nmap: 53/tcp   open  domain
+[*] Nmap: 80/tcp   open  http
+[*] Nmap: 111/tcp  open  rpcbind
+[*] Nmap: 139/tcp  open  netbios-ssn
+[*] Nmap: 445/tcp  open  microsoft-ds
+[*] Nmap: 512/tcp  open  exec
+[*] Nmap: 513/tcp  open  login
+[*] Nmap: 514/tcp  open  shell
+[*] Nmap: 1099/tcp open  rmiregistry
+[*] Nmap: 1524/tcp open  ingreslock
+[*] Nmap: 2049/tcp open  nfs
+[*] Nmap: 2121/tcp open  ccproxy-ftp
+[*] Nmap: 3306/tcp open  mysql
+[*] Nmap: 5432/tcp open  postgresql
+[*] Nmap: 5900/tcp open  vnc
+[*] Nmap: 6000/tcp open  X11
+[*] Nmap: 6667/tcp open  irc
+[*] Nmap: 8180/tcp open  unknown
+[*] Nmap: MAC Address: 08:00:27:67:80:33 (Cadmus Computer Systems)
+[*] Nmap: Nmap done: 1 IP address (1 host up) scanned in 5.15 seconds
+msf > 
+

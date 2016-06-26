@@ -1,0 +1,21 @@
+Exclude T:9100-9106
+
+Probe TCP SomeServer q|x02Hi|
+rarity 1
+ports 9107
+match someServer m/^Greeting \((\w*) ([\d.]*)\)/ p/$1/ v/$2/
+
+
+
+root@kali:~# nmap 10.0.0.2 -p 9107 -sV
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-06-20 07:53 UTC
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.0.0.2
+Host is up (0.0017s latency).
+PORT     STATE SERVICE    VERSION
+9107/tcp open  someServer SomeServer 2.4
+MAC Address: 08:00:27:67:80:33 (Cadmus Computer Systems)
+
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 7.74 seconds

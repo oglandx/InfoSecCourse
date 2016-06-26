@@ -1,0 +1,327 @@
+root@kali:/usr/share/nmap# ls -l
+total 6503
+-rw-r--r-- 1 root root   10546 Dec  6  2013 nmap.dtd
+-rw-r--r-- 1 root root  455371 Dec  6  2013 nmap-mac-prefixes
+-rw-r--r-- 1 root root 3694559 Dec  6  2013 nmap-os-db
+-rw-r--r-- 1 root root   11749 Dec  6  2013 nmap-payloads
+-rw-r--r-- 1 root root    6631 Dec  6  2013 nmap-protocols
+-rw-r--r-- 1 root root   49243 Dec  6  2013 nmap-rpc
+-rw-r--r-- 1 root root 1727204 Dec  6  2013 nmap-service-probes
+-rw-r--r-- 1 root root  622039 Dec  6  2013 nmap-services
+-rw-r--r-- 1 root root   31935 Dec  6  2013 nmap.xsl
+drwxr-xr-x 3 root root    1761 Jan  8  2014 nselib
+-rw-r--r-- 1 root root   47190 Dec  6  2013 nse_main.lua
+drwxr-xr-x 2 root root   12216 Jan  8  2014 scripts
+root@kali:/usr/share/nmap# head -n 100 nmap-services 
+# THIS FILE IS GENERATED AUTOMATICALLY FROM A MASTER - DO NOT EDIT.
+# EDIT /nmap-private-dev/nmap-services-all IN SVN INSTEAD.
+# Well known service port numbers -*- mode: fundamental; -*-
+# From the Nmap Security Scanner ( http://nmap.org )
+#
+# $Id: nmap-services 31220 2013-07-03 04:30:43Z david $
+#
+# Derived from IANA data and our own research
+# 
+# This collection of service data is (C) 1996-2011 by Insecure.Com
+# LLC.  It is distributed under the Nmap Open Source license as
+# provided in the COPYING file of the source distribution or at
+# http://nmap.org/data/COPYING .  Note that this license
+# requires you to license your own work under a compatable open source
+# license.  If you wish to embed Nmap technology into proprietary
+# software, we sell alternative licenses (contact sales@insecure.com).
+# Dozens of software vendors already license Nmap technology such as
+# host discovery, port scanning, OS detection, and version detection.
+# For more details, see http://nmap.org/book/man-legal.html
+#
+# Fields in this file are: Service name, portnum/protocol, open-frequency, optional comments
+#
+tcpmux	1/tcp	0.001995	# TCP Port Service Multiplexer [rfc-1078]
+tcpmux	1/udp	0.001236	# TCP Port Service Multiplexer
+compressnet	2/tcp	0.000013	# Management Utility
+compressnet	2/udp	0.001845	# Management Utility
+compressnet	3/tcp	0.001242	# Compression Process
+compressnet	3/udp	0.001532	# Compression Process
+unknown	4/tcp	0.000477
+rje	5/udp	0.000593	# Remote Job Entry
+unknown	6/tcp	0.000502
+echo	7/sctp	0.000000
+echo	7/tcp	0.004855
+echo	7/udp	0.024679
+unknown	8/tcp	0.000013
+discard	9/sctp	0.000000	# sink null
+discard	9/tcp	0.003764	# sink null
+discard	9/udp	0.015733	# sink null
+unknown	10/tcp	0.000063
+systat	11/tcp	0.000075	# Active Users
+systat	11/udp	0.000577	# Active Users
+unknown	12/tcp	0.000063
+daytime	13/tcp	0.003927
+daytime	13/udp	0.004827
+unknown	14/tcp	0.000038
+netstat	15/tcp	0.000038
+unknown	16/tcp	0.000050
+qotd	17/tcp	0.002346	# Quote of the Day
+qotd	17/udp	0.009209	# Quote of the Day
+msp	18/udp	0.000610	# Message Send Protocol
+chargen	19/tcp	0.002559	# ttytst source Character Generator
+chargen	19/udp	0.015865	# ttytst source Character Generator
+ftp-data	20/sctp	0.000000	# File Transfer [Default Data]
+ftp-data	20/tcp	0.001079	# File Transfer [Default Data]
+ftp-data	20/udp	0.001878	# File Transfer [Default Data]
+ftp	21/sctp	0.000000	# File Transfer [Control]
+ftp	21/tcp	0.197667	# File Transfer [Control]
+ftp	21/udp	0.004844	# File Transfer [Control]
+ssh	22/sctp	0.000000	# Secure Shell Login
+ssh	22/tcp	0.182286	# Secure Shell Login
+ssh	22/udp	0.003905	# Secure Shell Login
+telnet	23/tcp	0.221265
+telnet	23/udp	0.006211
+priv-mail	24/tcp	0.001154	# any private mail system
+priv-mail	24/udp	0.000329	# any private mail system
+smtp	25/tcp	0.131314	# Simple Mail Transfer
+smtp	25/udp	0.001285	# Simple Mail Transfer
+rsftp	26/tcp	0.007991	# RSFTP
+nsw-fe	27/tcp	0.000138	# NSW User System FE
+nsw-fe	27/udp	0.000395	# NSW User System FE
+unknown	28/tcp	0.000050
+msg-icp	29/tcp	0.000025	# MSG ICP
+msg-icp	29/udp	0.000560	# MSG ICP
+unknown	30/tcp	0.000527
+msg-auth	31/tcp	0.000025	# MSG Authentication
+msg-auth	31/udp	0.000939	# MSG Authentication
+unknown	32/tcp	0.000339
+dsp	33/tcp	0.001016	# Display Support Protocol
+dsp	33/udp	0.000560	# Display Support Protocol
+unknown	34/tcp	0.000025
+priv-print	35/tcp	0.000038	# any private printer server
+priv-print	35/udp	0.000708	# any private printer server
+time	37/tcp	0.003161	# timserver
+time	37/udp	0.006458	# timserver
+rap	38/tcp	0.000025	# Route Access Protocol
+rap	38/udp	0.002043	# Route Access Protocol
+rlp	39/udp	0.000478	# Resource Location Protocol
+unknown	40/tcp	0.000038
+graphics	41/udp	0.000445
+nameserver	42/tcp	0.000803	# Host Name Server
+nameserver	42/udp	0.005288	# Host Name Server
+whois	43/tcp	0.000314	# nicname
+whois	43/udp	0.000313	# nicname
+mpm-flags	44/tcp	0.000025	# MPM FLAGS Protocol
+mpm-flags	44/udp	0.000659	# MPM FLAGS Protocol
+mpm	45/tcp	0.000050	# Message Processing Module [recv]
+mpm	45/udp	0.000741	# Message Processing Module [recv]
+mpm-snd	46/udp	0.000494	# MPM [default send]
+ni-ftp	47/tcp	0.000075	# NI FTP
+ni-ftp	47/udp	0.001071	# NI FTP
+root@kali:/usr/share/nmap# 
+root@kali:/usr/share/nmap# 
+root@kali:/usr/share/nmap# 
+root@kali:/usr/share/nmap# head -n 100 nmap-
+nmap-mac-prefixes    nmap-protocols       nmap-services
+nmap-os-db           nmap-rpc             
+nmap-payloads        nmap-service-probes  
+root@kali:/usr/share/nmap# head -n 100 nmap-os-db 
+# Nmap OS Fingerprinting 2nd Generation DB. -*- mode: fundamental; -*-
+# $Id: nmap-os-db 31567 2013-07-29 00:03:01Z david $ 
+#
+# Contributions to this database are welcome.  If Nmap obtains a new
+# fingerprint (and test conditions are favorable), it will print out a
+# URL you can use to submit the fingerprint.  If Nmap guesses wrong,
+# please see http://nmap.org/submit/ .
+#
+# By submitting fingerprints you are transfering any and all copyright
+# interest in the data to Insecure.Com LLC so it can modified,
+# incorporated into Nmap, relicensed, etc.
+#
+# This collection of fingerprint data is (C) 1996-2010 by Insecure.Com
+# LLC.  It is distributed under the Nmap Open Source license as
+# provided in the COPYING file of the source distribution or at
+# http://nmap.org/data/COPYING .  Note that this license
+# requires you to license your own work under a compatable open source
+# license.  If you wish to embed Nmap technology into proprietary
+# software, we sell alternative licenses (contact sales@insecure.com).
+# Dozens of software vendors already license Nmap technology such as
+# host discovery, port scanning, OS detection, and version detection.
+# For more details, see http://nmap.org/book/man-legal.html
+#
+# For a complete description of Nmap OS detection and the format of
+# fingerprints in this file, see http://nmap.org/book/osdetect.html.
+
+# This first element provides the number of points every fingerprint
+# test is worth.  Tests like TTL or Don't fragment are worth less
+# (individually) because there are so many of them and the values are
+# often correlated with each other.  Meanwhile, elements such as TS
+# (TCP timestamp) which are only used once, get more points.  Points
+# are used when there are no perfect matches to determine which OS
+# fingerprint matches a target machine most closely.
+MatchPoints
+SEQ(SP=25%GCD=75%ISR=25%TI=100%CI=50%II=100%SS=80%TS=100)
+OPS(O1=20%O2=20%O3=20%O4=20%O5=20%O6=20)
+WIN(W1=15%W2=15%W3=15%W4=15%W5=15%W6=15)
+ECN(R=100%DF=20%T=15%TG=15%W=15%O=15%CC=100%Q=20)
+T1(R=100%DF=20%T=15%TG=15%S=20%A=20%F=30%RD=20%Q=20)
+T2(R=80%DF=20%T=15%TG=15%W=25%S=20%A=20%F=30%O=10%RD=20%Q=20)
+T3(R=80%DF=20%T=15%TG=15%W=25%S=20%A=20%F=30%O=10%RD=20%Q=20)
+T4(R=100%DF=20%T=15%TG=15%W=25%S=20%A=20%F=30%O=10%RD=20%Q=20)
+T5(R=100%DF=20%T=15%TG=15%W=25%S=20%A=20%F=30%O=10%RD=20%Q=20)
+T6(R=100%DF=20%T=15%TG=15%W=25%S=20%A=20%F=30%O=10%RD=20%Q=20)
+T7(R=80%DF=20%T=15%TG=15%W=25%S=20%A=20%F=30%O=10%RD=20%Q=20)
+U1(R=50%DF=20%T=15%TG=15%IPL=100%UN=100%RIPL=100%RID=100%RIPCK=100%RUCK=100%RUD=100)
+IE(R=50%DFI=40%T=15%TG=15%CD=100)
+
+# 4-port GSM-SIP gateway PORTech MV-374
+# 2FXS VoIP gateway K-3288W
+Fingerprint 2FXS K-3288W or PORTech MV-374 GSM-SIP VoIP adapter
+Class 2FXS | embedded || VoIP adapter
+Class PORTech | embedded || VoIP adapter
+CPE cpe:/h:portech:mv-374
+SEQ(SP=0-5%GCD=61A8|C350|124F8|186A0|1E848%ISR=8A-94%TI=I%II=RI%SS=O%TS=U)
+OPS(O1=M5B4|WANM5B4T10S%O2=M578|M578W0ST10L%O3=M280|T10NNW5NM280%O4=M5B4|ST10WAL%O5=M218|M218ST10WAL%O6=M109|M109ST10)
+WIN(W1=0|3180%W2=0|3180%W3=0|3180%W4=0|3180%W5=0|3180%W6=0|3180)
+ECN(R=Y%DF=N%T=3B-45%TG=40%W=0%O=WANM5B4SNN%CC=N%Q=R)
+T1(R=Y%DF=N%T=3B-45%TG=40%S=O|Z%A=S+%F=AR|AS%RD=0%Q=)
+T2(R=Y%DF=Y%T=3B-45%TG=40%W=0%S=Z%A=S%F=AR%O=WANM109T10S%RD=0%Q=)
+T3(R=Y%DF=N%T=3B-45%TG=40%W=0%S=Z%A=O%F=AR%O=WANM109T10S%RD=0%Q=)
+T4(R=Y%DF=Y%T=3B-45%TG=40%W=0%S=A%A=Z%F=R%O=WANM109T10S%RD=0%Q=)
+T5(R=Y%DF=N%T=3B-45%TG=40%W=0%S=Z%A=S+%F=AR%O=WANM109T10S%RD=0%Q=)
+T6(R=Y%DF=Y%T=3B-45%TG=40%W=0%S=A%A=Z%F=R%O=WANM109T10S%RD=0%Q=)
+T7(R=Y%DF=N%T=3B-45%TG=40%W=0%S=Z%A=S+%F=AR%O=WFNM109T10S%RD=0%Q=)
+U1(DF=N%T=FA-104%TG=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(DFI=S%T=FA-104%TG=FF%CD=S)
+
+# 2N VOIP doorbell
+Fingerprint 2N Helios IP VoIP doorbell
+Class 2N | embedded || specialized
+CPE cpe:/h:2n:helios
+SEQ(SP=0-5%GCD=51E80C|A3D018|F5B824|147A030|199883C%ISR=C8-D2%TI=I|RD%CI=I%II=RI%SS=S%TS=U)
+OPS(O1=M5B4%O2=M5B4%O3=M5B4%O4=M5B4%O5=M5B4%O6=M5B4)
+WIN(W1=8000%W2=8000%W3=8000%W4=8000%W5=8000%W6=8000)
+ECN(R=Y%DF=N%T=FA-104%TG=FF%W=8000%O=M5B4%CC=N%Q=)
+T1(R=Y%DF=N%T=FA-104%TG=FF%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=Y%DF=N%T=FA-104%TG=FF%W=8000%S=O%A=S+%F=AS%O=M5B4%RD=0%Q=)
+T4(R=Y%DF=N%T=FA-104%TG=FF%W=8000%S=A+%A=S%F=AR%O=%RD=0%Q=)
+T5(R=Y%DF=N%T=FA-104%TG=FF%W=8000%S=A%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=N%T=FA-104%TG=FF%W=8000%S=A%A=S%F=AR%O=%RD=0%Q=)
+T7(R=Y%DF=N%T=FA-104%TG=FF%W=8000%S=A%A=S+%F=AR%O=%RD=0%Q=)
+U1(DF=N%T=FA-104%TG=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(DFI=S%T=FA-104%TG=FF%CD=S)
+
+# BT2700HGV DSL Router version 5.29.107.19
+Fingerprint 2Wire BT2700HG-V ADSL modem
+Class 2Wire | embedded || broadband router
+CPE cpe:/h:2wire:bt2700hg-v
+SEQ(SP=6A-BE%GCD=1-6%ISR=96-A0%TI=I%CI=I%II=I%SS=S%TS=A)
+OPS(O1=M5B4NNSW0NNNT11%O2=M578NNSW0NNNT11%O3=M280W0NNNT11%O4=M218NNSW0NNNT11%O5=M218NNSW0NNNT11%O6=M109NNSNNT11)
+WIN(W1=8000%W2=8000%W3=8000%W4=8000%W5=8000%W6=8000)
+ECN(R=Y%DF=Y%T=FA-104%TG=FF%W=8000%O=M5B4NNSW0N%CC=N%Q=)
+T1(R=Y%DF=Y%T=FA-104%TG=FF%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%T=FA-104%TG=FF%W=0%S=A%A=Z%F=R%O=%RD=E44A4E43%Q=)
+T5(R=Y%DF=Y%T=FA-104%TG=FF%W=0%S=Z%A=S+%F=AR%O=%RD=1F59B3D4%Q=)
+T6(R=Y%DF=Y%T=FA-104%TG=FF%W=0%S=A%A=Z%F=R%O=%RD=1F59B3D4%Q=)
+root@kali:/usr/share/nmap# 
+root@kali:/usr/share/nmap# head nmap-service-probes -n 100
+# Nmap service detection probe list -*- mode: fundamental; -*-
+# $Id: nmap-service-probes 31402 2013-07-18 03:38:37Z david $
+#
+# This is a database of custom probes and expected responses that the
+# Nmap Security Scanner ( http://nmap.org ) uses to
+# identify what services (eg http, smtp, dns, etc.) are listening on
+# open ports.  Contributions to this database are welcome.  We hope to
+# create an automated submission system (as with OS fingerprints), but
+# for now you can email fyodor any new probes you develop so that he
+# can include them in the main Nmap distributon.  By sending new
+# probe/matches to Fyodor or one the insecure.org development mailing
+# lists, it is assumed that you are transfering any and all copyright
+# interest in the data to Fyodor so that he can modify it, relicense
+# it, incorporate it into programs, etc. This is important because the
+# inability to relicense code has caused devastating problems for
+# other Free Software projects (such as KDE and NASM).  Nmap will
+# always be available Open Source.  If you wish to specify special
+# license conditions of your contributions, just say so when you send
+# them.
+#
+# This collection of probe data is (C) 1998-2010 by Insecure.Com
+# LLC.  It is distributed under the Nmap Open Source license as
+# provided in the COPYING file of the source distribution or at
+# http://nmap.org/data/COPYING .  Note that this license
+# requires you to license your own work under a compatable open source
+# license.  If you wish to embed Nmap technology into proprietary
+# software, we sell alternative licenses (contact sales@insecure.com).
+# Dozens of software vendors already license Nmap technology such as
+# host discovery, port scanning, OS detection, and version detection.
+# For more details, see http://nmap.org/book/man-legal.html
+#
+# For details on how Nmap version detection works, why it was added,
+# the grammar of this file, and how to detect and contribute new
+# services, see http://nmap.org/book/vscan.html.
+
+# The Exclude directive takes a comma separated list of ports.
+# The format is exactly the same as the -p switch.
+Exclude T:9100-9107
+
+# This is the NULL probe that just compares any banners given to us
+##############################NEXT PROBE##############################
+Probe TCP NULL q||
+# Wait for at least 6 seconds for data.  It used to be 5, but some
+# smtp services have lately been instituting an artificial pause (see
+# FEATURE('greet_pause') in Sendmail, for example)
+totalwaitms 6000
+
+match 1c-server m|^S\xf5\xc6\x1a{| p/1C:Enterprise business management server/
+
+match 4d-server m|^\0\0\0H\0\0\0\x02.[^\0]*\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0$|s p/4th Dimension database server/
+
+match acap m|^\* ACAP \(IMPLEMENTATION \"CommuniGate Pro ACAP (\d[-.\w]+)\"\) | p/CommuniGate Pro ACAP server/ v/$1/ i/for mail client preference sharing/
+match acarsd m|^g\0\0\0\x1b\0\0\0\0\0\0\0acarsd\t([\w._-]+)\tAPI-([\w._-]+)\)\0\0\0\x06\x05\0\0\0\0\0\0<\?xml | p/acarsd/ v/$1/ i/API $2/ cpe:/a:acarsd:$1/
+match acmp m|^ACMP Server Version ([\w._-]+)\r\n| p/Aagon ACMP Inventory/ v/$1/
+match activemq m|^\0\0\0.\x01ActiveMQ\0\0\0|s p/Apache ActiveMQ/
+
+# Microsoft ActiveSync Version 3.7 Build 3083 (It's used for syncing
+# my ipaq it disappears when you remove the ipaq.)
+match activesync m|^.\0\x01\0[^\0]\0[^\0]\0[^\0]\0[^\0]\0[^\0]\0.*\0\0\0$|s p/Microsoft ActiveSync/ o/Windows/ cpe:/a:microsoft:activesync/ cpe:/o:microsoft:windows/a
+match activesync m|^\(\0\0\0\x02\0\0\0\x03\0\0\0\+\0\0\x003\0\0\0\0\0\0\0\x04\0\0`\x01\0\0\xff\0\0\0\0\0\0\0\0\0\0\0$|s p/Citrix ActiveSync/ o/Windows/ cpe:/o:microsoft:windows/a
+
+match adabas-d m|^Adabas D Remote Control Server Version ([\d.]+) Date [\d-]+ \(key is [0-9a-f]+\)\r\nOK> | p/Adabas D database remote control/ v/$1/
+
+match adobe-crossdomain m|^<cross-domain-policy><allow-access-from domain='([^']*)' to-ports='([^']*)' /></cross-domain-policy>\0$| p/Adobe cross-domain policy/ i/domain: $1; ports: $2/
+# Missing trailing \0? Was like that in the submission.
+match adobe-crossdomain m|^<cross-domain-policy><allow-access-from domain=\"([^\"]*)\" to-ports=\"([^\"]*)\"/></cross-domain-policy>$| p/Adobe cross-domain policy/ i/domain: $1; ports: $2/
+
+match afsmain m|^\+Welcome to Ability FTP Server \(Admin\)\. \[20500\]\r\n| p/Code-Crafters Ability FTP Server afsmain admin/ o/Windows/ cpe:/o:microsoft:windows/a
+
+match altiris-agent m|^<\0r\0e\0s\0p\0o\0n\0s\0e\0>\0C\0o\0n\0n\0e\0c\0t\0e\0d\0 \0t\0o\0 [\0\d.]*<\0/\0r\0e\0s\0p\0o\0n\0s\0e\0>\0$| p/Altiris remote monitoring agent/
+
+# AMANDA index server 2.4.2p2 on Linux 2.4
+match amanda m|^220 ([-.\w]+) AMANDA index server \((\d[-.\w ]+)\) ready\.\r\n| p/Amanda backup system index server/ v/$2/ o/Unix/ h/$1/
+match amanda m|^501 Could not read config file [^!\r\n]+!\r\n220 ([-.\w]+) AMANDA index server \(([-\w_.]+)\) ready\.\r\n| p/Amanda backup system index server/ v/$2/ i/broken: config file not found/ h/$1/
+match amanda m|^ld\.so\.1: amandad: fatal: (libsunmath\.so\.1): open failed: No such file or directory\n$| p/Amanda backup system index server/ i/broken: $1 not found/
+
+match antivir m|^220 Symantec AntiVirus Scan Engine ready\.\r\n| p/Symantec AntiVirus Scan Engine/ cpe:/a:symantec:antivirus/
+match antivir m|^200 NOD32SS ([\d.]+) \((\d+)\)\r\n| p/NOD32 AntiVirus/ v/$1 ($2)/ cpe:/a:eset:nod32_antivirus:$1/
+
+match anyremote m|^Set\(icons,M,6,forward,7,prev,8,stop,9,next,\*,question,0,pause,#,no\);Set\(font,small\);Set\(menu,replace,Playlist,Toggle Shuffle,Toggle Repeat\);Set\(icons,MPD,1,vol_down,2,mute,3,vol_up,4,rewind,5,play,6,forward,7,prev,8,stop,9,next,\*,question,0,pause,#,no\);Set\(font,small\);Set\(menu,replace,Playlist,Toggle Shuffle,Toggle Repeat\);$| p/anyRemote remote control daemon/
+
+match aperio-aaf m|^<aafMessage><aafInitRequest></aafInitRequest></aafMessage>| p/Aperio Algorithm Framework/
+
+match aplus m|^\x01\xff\0\xff\x01\x1d\0\xfd\0\n\x03\x05A\+ API \(([\d.]+)\) - CCS \(([\d.]+)\)\0| p/Cleo A+/ i/API $1; CSS $2/
+match app m|^\0\x01\0\x08\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x01\0\0\0\x02$| p/Cisco Application Peering Protocol/ d/load balancer/
+
+# http://www.qosient.com/argus/
+match argus m|^\x80\x01\0\x80\0\x80\0\0\xe5az\xcb\0\0\0\0J...............\x02\0\x01\0\0<\x01,.......\0...\0\0\0\0\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\xff\xff\xff\xff\x01\x04\0.\0\x80\x08|s p/Argus network analyzer/ v/3.0/
+
+match arkeia m|^\0`\0\x04\0\0\0\x1810\x000\x000\x00852224\0\0\0\0\0\0\0\0\0\0\0$| p/Arkeia Network Backup/
+# arkstats (part of arkeia-light 5.1.12 Backup server) on Linux 2.4.20
+match arkstats m|^\0`\0\x03\0\0\0\x1810\x000\x000\x00852224\0\0\0\0\0\0\0\0\0\0\0| p/Arkeia arkstats/
+match artsd m|^MCOP\0\0\0.\0\0\0\x01\0\0\0\x10aRts/MCOP-([\d.]+)\0\0\0\0|s p/artsd/ i/MCOP $1/
+
+# Asterisk call manager - port 5038
+match asterisk m|^Asterisk Call Manager/([\d.]+)\r\n| p/Asterisk Call Manager/ v/$1/ cpe:/a:digium:asterisk:$1/
+match asterisk-proxy m|^Response: Follows\r\nPrivilege: Command\r\n--END COMMAND--\r\n| p/Asterisk Call Manager Proxy/ cpe:/a:digium:asterisk/
+
+match audit m|^Visionsoft Audit on Demand Service\r\nVersion: ([\d.]+)\r\n\r\n| p/Visionsoft Audit on Demand Service/ v/$1/ o/Windows/ cpe:/o:microsoft:windows/a
+match autosys m|^([\w._-]+)\nListener for [\w._-]+ AutoSysAdapter\nEOS\nExit Code = 1001\nIP <[\d.]+> is not authorized for this request\. Please contact your Web Administrator\.\nEOS\n| p/CA AutoSys RCS Listener/ v/$1/ i/not authorized/
+root@kali:/usr/share/nmap# 
+
