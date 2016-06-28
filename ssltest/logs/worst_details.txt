@@ -1,0 +1,40 @@
+DROWN (experimental)	
+IP Address	Port	Export	Special	Status
+54.187.98.185	443	Yes	Yes	Not checked (same host)
+54.244.3.166	443	Yes	Yes	Vulnerable (same key with SSL v2)
+(1) For a better understanding of this test, please read this longer explanation
+(2) Key usage data kindly provided by the Censys network search engine; original DROWN test here
+(3) Censys data is only indicative of possible key and certificate reuse; possibly out-of-date and incomplete
+(4) We perform real-time key reuse checks, but stop checking after first confirmed vulnerability
+(5) The "Special" column indicates vulnerable OpenSSL version; "Export" refers to export cipher suites
+Secure Renegotiation	Supported
+Secure Client-Initiated Renegotiation	No
+Insecure Client-Initiated Renegotiation	No
+BEAST attack	Not mitigated server-side (more info)   SSL 3: 0x39, TLS 1.0: 0x39
+POODLE (SSLv3)	Vulnerable   INSECURE (more info)   SSL 3: 0x39
+POODLE (TLS)	No (more info)
+Downgrade attack prevention	Yes, TLS_FALLBACK_SCSV supported (more info)
+SSL/TLS compression	No
+RC4	No
+Heartbeat (extension)	Yes
+Heartbleed (vulnerability)	No (more info)
+OpenSSL CCS vuln. (CVE-2014-0224)	No (more info)
+OpenSSL Padding Oracle vuln.
+(CVE-2016-2107)	Yes  INSECURE (more info)
+Forward Secrecy	Weak key exchange   WEAK
+ALPN	No
+NPN	No
+Session resumption (caching)	No (IDs assigned but not accepted)
+Session resumption (tickets)	Yes
+OCSP stapling	No
+Strict Transport Security (HSTS)	No
+HSTS Preloading	Not in: Chrome  Edge  Firefox  IE  Tor 
+Public Key Pinning (HPKP)	No
+Public Key Pinning Report-Only	No
+Long handshake intolerance	No
+TLS extension intolerance	No
+TLS version intolerance	No
+Incorrect SNI alerts	No
+Uses common DH primes	Yes   Replace with custom DH parameters if possible (more info)
+DH public server param (Ys) reuse	No
+SSL 2 handshake compatibility	Yes
