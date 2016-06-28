@@ -1,0 +1,171 @@
+[oglandx@oglandx console]$ gpg --help
+gpg (GnuPG) 2.1.12
+libgcrypt 1.7.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+
+Syntax: gpg [options] [files]
+Sign, check, encrypt or decrypt
+Default operation depends on the input data
+
+Commands:
+ 
+ -s, --sign                 make a signature
+     --clearsign            make a clear text signature
+ -b, --detach-sign          make a detached signature
+ -e, --encrypt              encrypt data
+ -c, --symmetric            encryption only with symmetric cipher
+ -d, --decrypt              decrypt data (default)
+     --verify               verify a signature
+ -k, --list-keys            list keys
+     --list-sigs            list keys and signatures
+     --check-sigs           list and check key signatures
+     --fingerprint          list keys and fingerprints
+ -K, --list-secret-keys     list secret keys
+     --gen-key              generate a new key pair
+     --quick-gen-key        quickly generate a new key pair
+     --quick-adduid         quickly add a new user-id
+     --full-gen-key         full featured key pair generation
+     --gen-revoke           generate a revocation certificate
+     --delete-keys          remove keys from the public keyring
+     --delete-secret-keys   remove keys from the secret keyring
+     --quick-sign-key       quickly sign a key
+     --quick-lsign-key      quickly sign a key locally
+     --sign-key             sign a key
+     --lsign-key            sign a key locally
+     --edit-key             sign or edit a key
+     --passwd               change a passphrase
+     --export               export keys
+     --send-keys            export keys to a key server
+     --recv-keys            import keys from a key server
+     --search-keys          search for keys on a key server
+     --refresh-keys         update all keys from a keyserver
+     --import               import/merge keys
+     --card-status          print the card status
+     --card-edit            change data on a card
+     --change-pin           change a card's PIN
+     --update-trustdb       update the trust database
+     --print-md             print message digests
+     --server               run in server mode
+     --tofu-policy VALUE    set the TOFU policy for a key
+
+Options:
+ 
+ -a, --armor                create ascii armored output
+ -r, --recipient USER-ID    encrypt for USER-ID
+ -u, --local-user USER-ID   use USER-ID to sign or decrypt
+ -z N                       set compress level to N (0 disables)
+     --textmode             use canonical text mode
+ -o, --output FILE          write output to FILE
+ -v, --verbose              verbose
+ -n, --dry-run              do not make any changes
+ -i, --interactive          prompt before overwriting
+     --openpgp              use strict OpenPGP behavior
+
+(See the man page for a complete listing of all commands and options)
+
+Examples:
+
+ -se -r Bob [file]          sign and encrypt for user Bob
+ --clearsign [file]         make a clear text signature
+ --detach-sign [file]       make a detached signature
+ --list-keys [names]        show keys
+ --fingerprint [names]      show fingerprints
+
+Please report bugs to <https://bugs.gnupg.org>.
+[oglandx@oglandx console]$ 
+[oglandx@oglandx console]$ gpg --gen-key
+gpg (GnuPG) 2.1.12; Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Note: Use "gpg2 --full-gen-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Kosolapov Semyon
+Email address: myaddress@gmail.com
+You selected this USER-ID:
+    "Kosolapov Semyon <myaddress@gmail.com>"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: key C361ED83 marked as ultimately trusted
+gpg: revocation certificate stored as '/home/oglandx/.gnupg/openpgp-revocs.d/989F0C2ED5C2BC15778054288FB539FDC361ED83.rev'
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   3  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 3u
+pub   rsa2048/C361ED83 2016-06-28 [S]
+      Key fingerprint = 989F 0C2E D5C2 BC15 7780  5428 8FB5 39FD C361 ED83
+uid         [ultimate] Kosolapov Semyon <myaddress@gmail.com>
+sub   rsa2048/2583CFFF 2016-06-28 []
+
+[oglandx@oglandx console]$ ls
+file_to_encrypt.png
+[oglandx@oglandx console]$ gpg --list-sigs
+/home/oglandx/.gnupg/pubring.kbx
+--------------------------------
+pub   rsa2048/F638203B 2016-06-18 [SC]
+uid         [ultimate] Kosolapov Semyon (i don't have an idea what i have to write here) <oglandx@yandex.ru>
+sig 3        F638203B 2016-06-18  Kosolapov Semyon (i don't have an idea what i have to write here) <oglandx@yandex.ru>
+sub   rsa2048/45941F8D 2016-06-18 [E]
+sig          F638203B 2016-06-18  Kosolapov Semyon (i don't have an idea what i have to write here) <oglandx@yandex.ru>
+
+pub   rsa2048/9C7566F3 2016-02-22 [SC]
+uid         [ unknown] sba002 <skipalboris@gmail.com>
+sig 3        9C7566F3 2016-02-22  sba002 <skipalboris@gmail.com>
+sub   rsa2048/00808598 2016-02-22 [E]
+sig          9C7566F3 2016-02-22  sba002 <skipalboris@gmail.com>
+
+pub   rsa2048/C361ED83 2016-06-28 [SC]
+uid         [ultimate] Kosolapov Semyon <myaddress@gmail.com>
+sig 3        C361ED83 2016-06-28  Kosolapov Semyon <myaddress@gmail.com>
+sub   rsa2048/2583CFFF 2016-06-28 [E]
+sig          C361ED83 2016-06-28  Kosolapov Semyon <myaddress@gmail.com>
+
+[oglandx@oglandx console]$ gpg --list-keys
+/home/oglandx/.gnupg/pubring.kbx
+--------------------------------
+pub   rsa2048/F638203B 2016-06-18 [SC]
+uid         [ultimate] Kosolapov Semyon (i don't have an idea what i have to write here) <oglandx@yandex.ru>
+sub   rsa2048/45941F8D 2016-06-18 [E]
+
+pub   rsa2048/9C7566F3 2016-02-22 [SC]
+uid         [ unknown] sba002 <skipalboris@gmail.com>
+sub   rsa2048/00808598 2016-02-22 [E]
+
+pub   rsa2048/C361ED83 2016-06-28 [SC]
+uid         [ultimate] Kosolapov Semyon <myaddress@gmail.com>
+sub   rsa2048/2583CFFF 2016-06-28 [E]
+
+[oglandx@oglandx console]$ 
+[oglandx@oglandx console]$ gpg --armor --local-user 2583CFFF --recipient 'Kosolapov Semyon' --encrypt file_to_encrypt.png 
+[oglandx@oglandx console]$ ls -l
+total 120
+-rw-r--r-- 1 oglandx oglandx 52785 Jun 28 13:01 file_to_encrypt.png
+-rw-r--r-- 1 oglandx oglandx 69089 Jun 28 13:35 file_to_encrypt.png.asc
+[oglandx@oglandx console]$ gpg --output decrypted_file.png --decrypt file_to_encrypt.png.asc 
+gpg: encrypted with 2048-bit RSA key, ID 45941F8D, created 2016-06-18
+      "Kosolapov Semyon (i don't have an idea what i have to write here) <oglandx@yandex.ru>"
+[oglandx@oglandx console]$ 
+[oglandx@oglandx console]$ cmp -l file_to_encrypt.png decrypted_file.png 
+[oglandx@oglandx console]$ 
